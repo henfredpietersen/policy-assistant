@@ -1,0 +1,16 @@
+question,expected_id
+How do I change my beneficiary?,beneficiaries#Changing beneficiaries
+Can my child be a beneficiary?,beneficiaries#Minors as beneficiaries
+Who gets the money if I never named anyone?,beneficiaries#No beneficiary nominated
+Can I split the payout between my two kids?,beneficiaries#Nominating a beneficiary
+What happens if I miss a premium?,premiums#Missed premiums and the grace period
+Why did my premium go up this year?,premiums#Annual premium increases
+Can I change my debit order date?,premiums#How premiums are paid
+My policy lapsed. Can I get it back?,premiums#Reinstating a lapsed policy
+Can I cancel and get a refund in the cooling-off period?,cancellations#Cooling-off period
+Do I get money back if I cancel after a few years?,cancellations#Cancelling after the cooling-off period
+I can't afford my premium. What are my options?,cancellations#Alternatives to cancelling
+What documents do I need for a death claim?,claims#How to submit a death claim
+How long does a claim take?,claims#How long a claim takes
+Why was my claim declined?,claims#Why a claim can be declined
+How do I claim for a dread disease?,claims#Disability and dread disease claims
