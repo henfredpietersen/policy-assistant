@@ -72,7 +72,7 @@ export PYTHONPATH=src              # Windows PowerShell: $env:PYTHONPATH="src"
 python scripts/train_intent.py           # train + tune the classifier, prints metrics
 python scripts/evaluate_retrieval.py     # retrieval Hit@k / MRR
 python scripts/ask.py "Can my child be a beneficiary?"
-pytest -v                                # 18 tests
+pytest -v                                # 22 tests
 uvicorn policy_assistant.api:app --reload
 ```
 
@@ -92,6 +92,15 @@ curl -X POST http://localhost:8000/ask \
   -H "Content-Type: application/json" \
   -d '{"question": "What happens if I miss a premium?"}'
 ```
+
+### Public demo (Render)
+
+`render.yaml` deploys the API as a free Render web service from the Dockerfile. The public instance:
+
+- answers extractively only (no `GEMINI_API_KEY` is set, so visitors cost nothing)
+- accepts browser calls only from outview.co.za (`ALLOWED_ORIGINS`)
+- limits each visitor to 20 questions per 10 minutes and the whole service to 500 a day; the limits live in memory and reset when the server restarts
+- goes to sleep when idle, so the first question after a quiet spell is slow
 
 ## CI
 

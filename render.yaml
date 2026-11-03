@@ -1,0 +1,24 @@
+# Render Blueprint for the public demo of policy-assistant.
+# Free web service built from the repo's Dockerfile. No API keys: answers are
+# extractive (GEMINI_API_KEY is deliberately not set), so visitors cost nothing.
+services:
+  - type: web
+    name: policy-assistant
+    runtime: docker
+    plan: free
+    region: frankfurt
+    dockerfilePath: ./Dockerfile
+    dockerContext: .
+    healthCheckPath: /health
+    autoDeployTrigger: checksPass
+    envVars:
+      - key: PORT
+        value: "8000"
+      - key: ALLOWED_ORIGINS
+        value: https://outview.co.za,https://www.outview.co.za
+      - key: RATE_LIMIT_PER_IP
+        value: "20"
+      - key: RATE_LIMIT_WINDOW_S
+        value: "600"
+      - key: RATE_LIMIT_DAILY
+        value: "500"

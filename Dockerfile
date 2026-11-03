@@ -14,4 +14,5 @@ COPY scripts ./scripts
 RUN python scripts/train_intent.py
 
 EXPOSE 8000
-CMD ["uvicorn", "policy_assistant.api:app", "--host", "0.0.0.0", "--port", "8000"]
+# Render (and most hosts) pass the port in $PORT; default to 8000 locally and in CI
+CMD ["sh", "-c", "uvicorn policy_assistant.api:app --host 0.0.0.0 --port ${PORT:-8000}"]
