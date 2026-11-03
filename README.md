@@ -12,6 +12,8 @@ It runs free with no API key. Set `GEMINI_API_KEY` and the answer step switches 
 
 I've built and shipped a commercial RAG chatbot for WordPress (PHP) at [Outview](https://outview.co.za). This project rebuilds the core ideas in Python and adds the pieces a production ML pipeline needs: evaluation metrics, hyperparameter tuning, tests, containerisation and CI.
 
+Built AI-assisted: I specified the system and the eval, Claude generated the code, and I reviewed it, ran the tests and checked the numbers.
+
 ## How it works
 
 ```
