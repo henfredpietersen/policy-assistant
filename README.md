@@ -8,6 +8,8 @@ It runs free with no API key. Set `GEMINI_API_KEY` and the answer step switches 
 
 > The knowledge base is a generic, fictional example written for this project. It is not any insurer's real policy wording.
 
+**Try it live:** [outview.co.za/case-study-policy-assistant](https://outview.co.za/case-study-policy-assistant/). Ask a question and see the intent, the answer and the sources it came from. The demo runs on a free server that sleeps when idle, so the first question can take about a minute.
+
 ## Why I built it
 
 I've built and shipped a commercial RAG chatbot for WordPress (PHP) at [Outview](https://outview.co.za). This project rebuilds the core ideas in Python and adds the pieces a production ML pipeline needs: evaluation metrics, hyperparameter tuning, tests, containerisation and CI.
@@ -94,6 +96,8 @@ curl -X POST http://localhost:8000/ask \
 ```
 
 ### Public demo (Render)
+
+The [live demo page](https://outview.co.za/case-study-policy-assistant/) calls this API. Its source is `docs/walkthrough.js`.
 
 `render.yaml` deploys the API as a free Render web service from the Dockerfile. The public instance:
 
