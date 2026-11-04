@@ -105,6 +105,7 @@ The [live demo page](https://outview.co.za/case-study-policy-assistant/) calls t
 - accepts browser calls only from outview.co.za (`ALLOWED_ORIGINS`)
 - limits each visitor to 20 questions per 10 minutes and the whole service to 500 a day; the limits live in memory and reset when the server restarts
 - goes to sleep when idle, so the first question after a quiet spell is slow
+- redeploys by itself when a push to `main` passes CI (`autoDeployTrigger: checksPass`)
 
 ## CI
 
